@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hospital Records</title>
+    <link rel="icon" href="https://i.ibb.co/C2dtq1C/Screenshot-2023-11-19-183629.png" type="png">
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+   
+    <div id="upper">
+      <h2>Hospital<sup>+</sup> - Doctor Records</h2>
+      <div id="firstsec">
+      <label for="Search By">Search by :</label>
+      <select name="Search By" id="searchby">
+        <option value="name">Name</option>
+        <option value="id">id</option>
+        <option value="number">Phone Number</option>
+        <option value="email">Email Id</option>
+        <option value="experiance">Experiance</option>
+        <option value="department">Department</option>
+      </select>
+    </div><!--end of firstsec-->
+
+       <div id="search">
+        <input placeholder="Search..." type="search" class="search" value="">
+        <button onclick="search()" id="searchbutton">Search</button>
+       </div>
+    </div> <!--end of upper that hold a h1 tag a select dropdown list and a div-->
+
+
+    <div id="body">
+     
+      <div id="formdiv">
+      <form id="form">
+        <label for="">Doctor Name</label><br />
+        <input id="name" value="" type="text" placeholder="Enter Doctor Name" /><br />
+        <label for="">Doctor ID</label><br />
+        <input id="docID" value="" type="number"placeholder="Enter Doctor ID"/><br />
+        <label for="">Specialization </label><br />
+        <select id="dept">
+          <option value="">Select Specialization</option>
+          <option value="Dermatologist">Dermatologist</option>
+          <option value="ENT">ENT</option>
+          <option value="Dentist">Dentist</option>
+          <option value="COVID">COVID</option>
+          <option value="Gynecologist">Gynecologist</option></select
+        ><br />
+        <label for="">Experience </label><br />
+        <input value="" id="exp" type="number" placeholder="Experience in Years" /><br />
+        <label for="">Email Address </label><br />
+        <input value="" type="text" id="email" placeholder="Enter Email Address" /><br />
+        <label for="">Mobile Number </label><br />
+        <input value="" id="mbl" type="number" placeholder="Enter Mobile number" /><br />
+         <button id="submit" typr="submit">Submit</button><br>
+      </form>
+      <button id="blankform"onclick="blankform()">Entry New Data</button>
+    </div><!--end of form div that hold all label and input and select tags-->
+    <div id="tab">
+      <div id="divv">
+        <p id="searchresult"></p>
+        <button id="closeresult"><i id="x"class="fa-solid fa-xmark"></i></button>
+      </div>
+      <table id="table">
+       
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Doctor ID</th>
+            <th>Specialization</th>
+            <th>Experience in years</th>
+            <th>Email address</th>
+            <th>Mobile Number</th>
+            <th>Role</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+         
+        </tbody>
+      </table>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script src="index.js"></script>
